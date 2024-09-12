@@ -1,0 +1,12 @@
+<%# app/views/quotes/edit.html.erb %>
+<%# provjerit kaj se dogodi ako promijenim quote u renderu, jel i dalje ide na partial %>
+<main class="container">
+  <%= link_to sanitize("&larr; Back to quote"), quote_path(@quote) %>
+
+  <div class="header">
+    <h1>Edit quote</h1>
+  </div>
+
+  <%= render "form", quote: @quote %>
+</main>
+
