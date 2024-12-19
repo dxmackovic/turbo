@@ -6,7 +6,7 @@
 <%# Step 2: insert the updated date at the correct position %>
 <% if previous_date = @line_item_date.previous_date %>
   <%= turbo_stream.after previous_date do %>
-    <%= render @line_item_date, quote: @quote % >
+    <%= render @line_item_date, quote: @quote %>
   <% end %>
 <% else %>
   <%= turbo_stream.prepend "line_item_dates" do %>
