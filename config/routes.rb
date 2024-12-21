@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :quotes
 
   resources :quotes do
-    resources :line_item_dates, expect: [:index, :show]
+    resources :line_item_dates, expect: [:index, :show] do
+      resources :line_items, except: [:index, :show]
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
